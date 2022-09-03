@@ -1,4 +1,5 @@
 import Head from "next/head";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="my first Next.js app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>Hola todas las páginas</header>
+
       <Component {...pageProps} />
     </>
   );
