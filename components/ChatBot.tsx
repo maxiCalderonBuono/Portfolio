@@ -197,10 +197,19 @@ const ANSWERS = {
         className="w-8 h-8"
       />
       <div className="flex flex-col">
-        <p className="m-0 mb-3">"Sure, here's how you can contact me:</p>
+        <p className="m-0 mb-3">Sure, here's how you can contact me:</p>
         <ul>
-          <li className="m-0">Email: calderonmaxi@outlook.com</li>
-          <li className="m-0">
+          <li className="m-0 font-bold text-teal-400">
+            {" "}
+            <Link
+              href="mailto:calderonmaxi@outlook.com"
+              className="font-bold text-white"
+              rel="noopener noreferrer"
+            >
+              Email
+            </Link>
+          </li>
+          <li className="m-0 font-bold text-teal-400">
             <Link
               href="https://www.linkedin.com/in/mcalderonbuono/"
               className="font-bold text-white"
@@ -209,7 +218,7 @@ const ANSWERS = {
               Linkedin
             </Link>
           </li>
-          <li className="m-0">
+          <li className="m-0 font-bold text-teal-400">
             <Link
               href="https://github.com/maxiCalderonBuono"
               rel="noopener noreferrer"
@@ -217,10 +226,18 @@ const ANSWERS = {
               Github
             </Link>
           </li>
+          <li className="m-0 font-bold text-teal-400">
+            <Link
+              href="https://twitter.com/mcalderonbuono"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </Link>
+          </li>
         </ul>
-        <p className="m-0 mb-3">
+        <p className="m-0 my-3">
           Feel free to reach out to me during the weekdays, during the day. I'll
-          get back to you as soon as I can!"
+          get back to you as soon as I can!
         </p>
       </div>
     </div>

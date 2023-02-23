@@ -49,7 +49,7 @@ export default function Home() {
           <p>
             But let's be real, it's not all about work for me. When I'm not
             nerding out on code, you can find me riding my bike, hanging out
-            with my wife and family, or exploring the great outdoors. 🌳
+            with my family and friends, or exploring the great outdoors. 🌳
           </p>
           <p>Welcome to my personal webpage!. Let´s get in touch 🚀.</p>
         </article>
