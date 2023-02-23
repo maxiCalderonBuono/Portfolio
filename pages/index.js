@@ -1,35 +1,64 @@
 import Head from "next/head";
 import Script from "next/script";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import Layout from "../components/layout";
+import { ChatBot } from "../components/ChatBot";
 
 export default function Home() {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <Script
         src="https://kit.fontawesome.com/91231a0f83.js"
         strategy="lazyOnload"
       />
-      <section className={utilStyles.headingMd}>
-        <p>
-          Hello!, I´m Maxi. I´m a software developer from Argentina, living in
-          Denmark.
+      <section>
+        <article className="flex justify-center gap-8 mt-8 mb-3 text-xl font-bold">
+          <div className="flex items-center gap-2">
+            <i className="text-gray-300 fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/mcalderonbuono/"
+              rel="nooponer noreferrer"
+              target="_blank"
+              className="text-violet-700"
+            >
+              {" "}
+              Linkedin{" "}
+            </a>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="text-gray-300 fa-brands fa-github"></i>
+            <a
+              href="https://github.com/maxiCalderonBuono"
+              rel="nooponer noreferrer"
+              target="_blank"
+              className="text-violet-700"
+            >
+              {" "}
+              Github{" "}
+            </a>
+          </div>
+        </article>
+        <article className="flex flex-col gap-4 text-xl font-medium text-gray-400">
+          <p>
+            Hello there! 👋 I'm a frontend developer with a passion for creating
+            stunning and functional websites.
+          </p>
+          <p>
+            I'm totally obsessed with tech, science, and entrepreneurship. 🤓 I
+            mean, who wouldn't be? It's all just so cool!
+          </p>
+          <p>
+            But let's be real, it's not all about work for me. When I'm not
+            nerding out on code, you can find me riding my bike, hanging out
+            with my wife and family, or exploring the great outdoors. 🌳
+          </p>
+          <p>Welcome to my personal webpage!. Let´s get in touch 🚀.</p>
+        </article>
+      </section>
+      <section className="mt-12">
+        <p className="my-3 text-2xl font-bold">
+          Want to know more about me? Ask my personal assistant 🤖{" "}
         </p>
-        <p>
-          I have a degree in industrial engineering and six years of experience
-          in different industries and roles. I´m passionate about technology,
-          sustainability and entrepreneurship.
-        </p>
-        <p>Welcome to my personal webpage!. Let´s get in touch 🚀.</p>
-        <div className={utilStyles.flexRow}>
-          <i class="fa-brands fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/mcalderonbuono/"> Linkedin </a>
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/maxiCalderonBuono"> Github </a>
-        </div>
+        <ChatBot />
       </section>
     </Layout>
   );
