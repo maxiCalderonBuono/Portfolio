@@ -351,7 +351,8 @@ export const ChatBot = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [prediction, setPrediction] = useState<string>("");
 
-  const lastChild = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -425,21 +426,19 @@ export const ChatBot = () => {
   };
 
   useEffect(() => {
-    lastChild.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    container.current?.scrollTo(0, container.current.scrollHeight);
   }, [messages]);
 
   return (
     <section>
       <div className="p-4 border border-gray-400 rounded-lg">
-        <div className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto">
+        <div
+          className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto"
+          ref={container}
+        >
           {messages.map((message) => (
             <div
               key={message.id}
-              ref={lastChild}
               className={`p-4 text-white max-w-[80%] rounded-3xl ${
                 message.type === "bot"
                   ? "bg-slate-600 self-start rounded-bl-none"

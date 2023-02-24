@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
         <meta name="description" content="Welcome to my portfolio" />
         <meta property="og:image" content="/images/profile.jpg" />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="/images/profile.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         {home ? (
