@@ -13,7 +13,10 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Welcome to my portfolio" />
-        <meta property="og:image" content="/images/profile.jpg" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1677250939/Maxi_Calder%C3%B3n_e3ibxq.png"
+        />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>

@@ -27,7 +27,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <meta property="og:image" content="/images/profile.jpg" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1677250939/Maxi_Calder%C3%B3n_e3ibxq.png"
+        />
       </Head>
 
       <Component {...pageProps} />
