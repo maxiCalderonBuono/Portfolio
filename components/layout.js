@@ -12,16 +12,8 @@ export default function Layout({ children, home }) {
     <div className="max-w-[800px]  px-[1rem] mx-auto pt-[3rem] dark:bg-gray-900 text-white">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
+        <meta name="description" content="Welcome to my portfolio" />
+        <meta property="og:image" content="/images/profile.jpg" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
