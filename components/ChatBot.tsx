@@ -6,7 +6,7 @@ import { BeatLoader } from "react-spinners";
 type Message = {
   id: string;
   type: "bot" | "user";
-  text: string | JSX.Element;
+  text: React.ReactNode;
 };
 
 const EXAMPLES = [
@@ -80,6 +80,16 @@ const EXAMPLES = [
   { text: "What is your favourite movie?", label: "default" },
   { text: "When was the World War 2?", label: "default" },
   { text: "How many ovnis have you see?", label: "default" },
+  { text: "0", label: "default" },
+  { text: "1", label: "default" },
+  { text: "2", label: "default" },
+  { text: "3", label: "default" },
+  { text: "4", label: "default" },
+  { text: "5", label: "default" },
+  { text: "6", label: "default" },
+  { text: "7", label: "default" },
+  { text: "8", label: "default" },
+  { text: "9", label: "default" },
 ];
 
 const API_KEY = "6EUJF3wmdJvXogOK11fNXu5sHNUwvmuefsNvJSD1";
@@ -123,23 +133,32 @@ const ANSWERS = {
           the IT world, and I haven't looked back since!
         </p>
         <div>
-          <p>My Greatest Hits</p>
+          <p className="mb-2 font-bold">My Greatest Hits</p>
           <ul>
-            <li className="m-0">
-              Co-created and codesigned a complete data management system for
+            <li className="m-0 mb-2">
+              - Co-created and codesigned a complete data management system for
               COVID-19 in my country.
+              <a
+                href="https://www.youtube.com/watch?v=XZMlZ50xacY"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="font-bold text-red-400"
+              >
+                {" "}
+                Check it out 🚀!{" "}
+              </a>
             </li>
-            <li className="m-0">
-              Taking part in different communities to share knowledge, support,
-              and help each other is what I do. Teamwork makes the dream work,
-              right?
+            <li className="m-0 mb-2">
+              - Taking part in different communities to share knowledge,
+              support, and help each other is what I do. Teamwork makes the
+              dream work, right?
             </li>
-            <li className="m-0">
-              I was part of a startup for three months back in Argentina that
+            <li className="m-0 mb-2">
+              - I was part of a startup for three months back in Argentina that
               aimed to connect developers with companies around the world.
             </li>
             <li className="m-0">
-              Participated in an internship at a Danish startup called Paytack
+              - Participated in an internship at a Danish startup called Paytack
               for three months.
             </li>
           </ul>
@@ -162,7 +181,7 @@ const ANSWERS = {
           hear about any roles or projects that may align with my skills and
           interests. Feel free to reach out to me via email, phone, or social
           media - you can find all of my contact information by typiying
-          <span className="font-bold text-teal-300">"contact"</span> in the
+          <span className="font-bold text-teal-300"> "contact"</span> in the
           chat. Looking forward to hearing from you!
         </p>
       </div>
@@ -236,6 +255,16 @@ const ANSWERS = {
           </li>
         </ul>
         <p className="m-0 my-3">
+          Need my resume?{" "}
+          <a
+            href="/data/maximilianoCalderónDeveloper.pdf"
+            download="Maximiliano Calderón"
+            className="font-bold text-teal-400"
+          >
+            Download
+          </a>
+        </p>
+        <p className="m-0 my-3">
           Feel free to reach out to me during the weekdays, during the day. I'll
           get back to you as soon as I can!
         </p>
@@ -254,10 +283,22 @@ const ANSWERS = {
           Of course! Here are some common questions you can ask me:
         </p>
         <ul>
-          <li className="m-0">Can you tell me more about yourself?</li>
-          <li className="m-0">Are you looking for new opportunities?</li>
-          <li className="m-0">Which technologies do you know?</li>
+          <li className="m-0"> 1- Can you tell me more about yourself?</li>
+          <li className="m-0"> 2- Are you looking for new opportunities?</li>
+          <li className="m-0"> 3 -Which technologies do you know?</li>
         </ul>
+        <div className="flex items-center gap-2 mt-2">
+          <span>Do you wanna try? Type any of that options</span>
+          <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+            1
+          </div>
+          <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+            2
+          </div>
+          <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+            3
+          </div>
+        </div>
       </div>
     </div>
   ),
@@ -308,18 +349,55 @@ export const ChatBot = () => {
 
   const [question, setQuestion] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [prediction, setPrediction] = useState<string>("");
 
-  const container = useRef<HTMLDivElement>(null);
-
+  const lastChild = useRef<HTMLDivElement>(null);
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
     if (isLoading) return;
+
     setIsLoading(true);
     setMessages((messages) =>
       messages.concat({ id: String(Date.now()), type: "user", text: question })
     );
 
     setQuestion("");
+
+    if (prediction === "help" && question === "1") {
+      setIsLoading(false);
+      setMessages((messages) =>
+        messages.concat({
+          id: String(Date.now()),
+          type: "bot",
+          text: ANSWERS["me"],
+        })
+      );
+
+      return;
+    } else if (prediction === "help" && question === "2") {
+      setIsLoading(false);
+      setMessages((messages) =>
+        messages.concat({
+          id: String(Date.now()),
+          type: "bot",
+          text: ANSWERS["job"],
+        })
+      );
+
+      return;
+    } else if (prediction === "help" && question === "3") {
+      setIsLoading(false);
+      setMessages((messages) =>
+        messages.concat({
+          id: String(Date.now()),
+          type: "bot",
+          text: ANSWERS["tech"],
+        })
+      );
+
+      return;
+    }
 
     const { classifications } = await fetch("https://api.cohere.ai/classify", {
       method: "POST",
@@ -335,6 +413,8 @@ export const ChatBot = () => {
     }).then((res) => res.json());
     setIsLoading(false);
 
+    setPrediction(classifications[0].prediction || "default");
+
     setMessages((messages) =>
       messages.concat({
         id: String(Date.now()),
@@ -345,18 +425,21 @@ export const ChatBot = () => {
   };
 
   useEffect(() => {
-    container.current?.scrollTo(0, container.current.scrollHeight);
+    lastChild.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   }, [messages]);
+
   return (
     <section>
       <div className="p-4 border border-gray-400 rounded-lg">
-        <div
-          ref={container}
-          className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto"
-        >
+        <div className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto">
           {messages.map((message) => (
             <div
               key={message.id}
+              ref={lastChild}
               className={`p-4 text-white max-w-[80%] rounded-3xl ${
                 message.type === "bot"
                   ? "bg-slate-600 self-start rounded-bl-none"
