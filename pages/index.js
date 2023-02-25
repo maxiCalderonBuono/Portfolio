@@ -6,95 +6,51 @@ import Card from "../components/Card";
 import Link from "next/link";
 import { BeatLoader } from "react-spinners";
 
+const examples = [
+  { text: "Hi", label: "gretting" },
+  { text: "Hello", label: "gretting" },
+  { text: "Good morning", label: "gretting" },
+  { text: "Good afternoon", label: "gretting" },
+  { text: "How are you?", label: "gretting" },
+  { text: "Who are you?", label: "gretting" },
+  { text: "Can we talk?", label: "gretting" },
+  { text: "I have a doubt", label: "help" },
+  { text: "Are you available?", label: "gretting" },
+  { text: "Can you tell me a little bit about yourself?", label: "me" },
+  { text: "Can you tell me about your background?", label: "me" },
+  { text: "Can you tell me more about your experience?", label: "me" },
+  { text: "How many years of experience do you have?", label: "me" },
+  { text: "Wich technologies do you know?", label: "me" },
+  { text: "Are you looking for a new opportunity?", label: "job" },
+  { text: "Are you currently employed?", label: "job" },
+  { text: "Where do you work?", label: "job" },
+  { text: "Are you actively seeking a new opportunity?", label: "job" },
+  { text: "What are you biggest strengths?", label: "profile" },
+  {
+    text: "Can you tell me about a time when you faced a challeging situation?",
+    label: "profile",
+  },
+  { text: "What are you long-term career goals?", label: "profile" },
+  { text: "Can you walk me through your resume?", label: "profile" },
+  {
+    text: "Can you highlight some of your key accomplishment?",
+    label: "profile",
+  },
+  { text: "How can we meet eachother?", label: "contact" },
+  { text: "How can we talk?", label: "contact" },
+  { text: "Do you have preferred method of comunication?", label: "contact" },
+  { text: "What is the best time to reach you?", label: "contact" },
+  { text: "Do you have a personal website?", label: "contact" },
+  { text: "Do you have a personal portfolio?", label: "contact" },
+  { text: "What is your email?", label: "contact" },
+  { text: "What is your telephone number?", label: "contact" },
+  { text: "What is your github?", label: "contact" },
+  { text: "Can I have your resume?", label: "contact" },
+  { text: "What are you social media?", label: "contact" },
+  { text: "help", label: "help" },
+];
+
 export default function Home() {
-  const EXAMPLES = [
-    { text: "Hi", label: "gretting" },
-    { text: "help", label: "help" },
-    { text: "Hello", label: "gretting" },
-    { text: "Good morning", label: "gretting" },
-    { text: "Good afternoon", label: "gretting" },
-    { text: "How are you?", label: "gretting" },
-    { text: "Who are you?", label: "gretting" },
-    { text: "Can we talk?", label: "gretting" },
-    { text: "I have a doubt", label: "help" },
-    { text: "Are you available?", label: "job" },
-    { text: "Can you tell me a little bit about yourself?", label: "me" },
-    { text: "Can you tell me about your background?", label: "me" },
-    { text: "Can you tell me more about your experience?", label: "me" },
-    { text: "How many years of experience do you have?", label: "tech" },
-    { text: "Wich technologies do you know?", label: "tech" },
-    {
-      text: "Have you worked with cloud technologies such as AWS, Azure, or Google Cloud Platform?",
-      label: "tech",
-    },
-    {
-      text: "What are your thoughts on front-end frameworks like React or Angular?",
-      label: "tech",
-    },
-    {
-      text: "What is your experience with version control systems like Git or SVN?",
-      label: "tech",
-    },
-    {
-      text: "Have you worked with machine learning or artificial intelligence technologies?",
-      label: "tech",
-    },
-
-    { text: "What technologies have you worked with before?", label: "tech" },
-    {
-      text: "What programming languages are you proficient in?",
-      label: "tech",
-    },
-    { text: "Are you looking for a new opportunity?", label: "job" },
-    { text: "Are you currently employed?", label: "job" },
-    { text: "Where do you work?", label: "job" },
-    { text: "Are you actively seeking a new opportunity?", label: "job" },
-    { text: "What are you biggest strengths?", label: "profile" },
-    {
-      text: "Can you tell me about a time when you faced a challeging situation?",
-      label: "profile",
-    },
-    { text: "What are you long-term career goals?", label: "profile" },
-    { text: "Can you walk me through your resume?", label: "profile" },
-    {
-      text: "Can you highlight some of your key accomplishment?",
-      label: "profile",
-    },
-    { text: "How can we meet eachother?", label: "contact" },
-    { text: "How can we talk?", label: "contact" },
-    {
-      text: "Do you have preferred method of comunication?",
-      label: "contact",
-    },
-    { text: "What is the best time to reach you?", label: "contact" },
-    { text: "Do you have a personal website?", label: "contact" },
-    { text: "Do you have a personal portfolio?", label: "contact" },
-    { text: "What is your email?", label: "contact" },
-    { text: "What is your telephone number?", label: "contact" },
-    { text: "What is your github?", label: "contact" },
-    { text: "How can I contact you?", label: "contact" },
-    { text: "contact", label: "contact" },
-    { text: "Can I have your resume?", label: "contact" },
-    { text: "What are you social media?", label: "contact" },
-    { text: "What is your dog's name?", label: "default" },
-    { text: "Do you like barbecue?", label: "default" },
-    { text: "What is your favourite movie?", label: "default" },
-    { text: "When was the World War 2?", label: "default" },
-    { text: "How many ovnis have you see?", label: "default" },
-    { text: "0", label: "default" },
-    { text: "1", label: "default" },
-    { text: "2", label: "default" },
-    { text: "3", label: "default" },
-    { text: "4", label: "default" },
-    { text: "5", label: "default" },
-    { text: "6", label: "default" },
-    { text: "7", label: "default" },
-    { text: "8", label: "default" },
-    { text: "9", label: "default" },
-  ];
-
-  const API_KEY = "6EUJF3wmdJvXogOK11fNXu5sHNUwvmuefsNvJSD1";
-
   const ANSWERS = {
     gretting: (
       <div>
@@ -289,16 +245,18 @@ export default function Home() {
             <li className="m-0"> 2- Are you looking for new opportunities?</li>
             <li className="m-0"> 3 -Which technologies do you know?</li>
           </ul>
-          <div className="flex items-center gap-2 mt-2">
-            <span>Do you wanna try? Type any of that options</span>
-            <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
-              1
-            </div>
-            <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
-              2
-            </div>
-            <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
-              3
+          <div className="flex flex-col items-center gap-2 mt-2 md:flex-row">
+            <span>Do you wanna try? Type any number of that options</span>
+            <div className="flex gap-2">
+              <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+                1
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+                2
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
+                3
+              </div>
             </div>
           </div>
         </div>
@@ -387,12 +345,7 @@ export default function Home() {
           Want to know more about me? Ask my personal assistant 🤖{" "}
         </p>
 
-        <ChatBot
-          apiKey={API_KEY}
-          examples={EXAMPLES}
-          answers={ANSWERS}
-          initialMessage="Someone out there?"
-        />
+        <ChatBot answers={ANSWERS} initialMessage="Someone out there?" />
       </section>
     </Layout>
   );

@@ -9,17 +9,11 @@ type Message = {
 
 type Props = {
   initialMessage: string;
-  apiKey: string;
-  examples: { text: string; label: string }[];
+
   answers: Record<string, React.ReactNode>;
 };
 
-export const ChatBot = ({
-  apiKey,
-  examples,
-  answers,
-  initialMessage,
-}: Props) => {
+export const ChatBot = ({ answers, initialMessage }: Props) => {
   const [messages, setMessages] = useState<Message[]>(() =>
     initialMessage
       ? [
@@ -98,13 +92,13 @@ export const ChatBot = ({
     const { classifications } = await fetch("https://api.cohere.ai/classify", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         model: "large",
         inputs: [question],
-        examples: examples,
+        examples: JSON.parse(process.env.NEXT_PUBLIC_EXAMPLES),
       }),
     }).then((res) => res.json());
     setIsLoading(false);
