@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
+import { ANSWERS } from "./utils/answers";
+import { getAiResponse } from "../helpers/getAiResponse";
 
 type Message = {
   id: string;
@@ -9,11 +11,9 @@ type Message = {
 
 type Props = {
   initialMessage: string;
-
-  answers: Record<string, React.ReactNode>;
 };
 
-export const ChatBot = ({ answers, initialMessage }: Props) => {
+export const ChatBot = ({ initialMessage }: Props) => {
   const [messages, setMessages] = useState<Message[]>(() =>
     initialMessage
       ? [
@@ -60,7 +60,7 @@ export const ChatBot = ({ answers, initialMessage }: Props) => {
         messages.concat({
           id: String(Date.now()),
           type: "bot",
-          text: answers["me"],
+          text: ANSWERS["me"],
         })
       );
 
@@ -71,7 +71,7 @@ export const ChatBot = ({ answers, initialMessage }: Props) => {
         messages.concat({
           id: String(Date.now()),
           type: "bot",
-          text: answers["job"],
+          text: ANSWERS["job"],
         })
       );
 
@@ -82,34 +82,24 @@ export const ChatBot = ({ answers, initialMessage }: Props) => {
         messages.concat({
           id: String(Date.now()),
           type: "bot",
-          text: answers["tech"],
+          text: ANSWERS["tech"],
         })
       );
 
       return;
     }
 
-    const { classifications } = await fetch("https://api.cohere.ai/classify", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "large",
-        inputs: [question],
-        examples: JSON.parse(process.env.NEXT_PUBLIC_EXAMPLES),
-      }),
-    }).then((res) => res.json());
+    const response = await getAiResponse(question);
+
     setIsLoading(false);
 
-    setPrediction(classifications[0].prediction || "default");
+    setPrediction(response || "default");
 
     setMessages((messages) =>
       messages.concat({
         id: String(Date.now()),
         type: "bot",
-        text: answers[classifications[0].prediction] || answers["default"],
+        text: ANSWERS[response] || ANSWERS["default"],
       })
     );
   };
@@ -144,7 +134,7 @@ export const ChatBot = ({ answers, initialMessage }: Props) => {
               isLoading ? "block" : "hidden"
             }`}
           >
-            {answers["answering"]}
+            {ANSWERS["answering"]}
           </div>
         </div>
         <form
