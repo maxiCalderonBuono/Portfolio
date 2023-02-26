@@ -125,7 +125,7 @@ export const ANSWERS = {
       <div className="flex flex-col">
         <p className="m-0 mb-3">Sure, here's how you can contact me:</p>
         <ul>
-          <li className="m-0 font-bold text-teal-400">
+          <li className="m-0 font-bold text-teal-400 hover:opacity-80">
             <Link
               href="mailto:calderonmaxi@outlook.com"
               className="font-bold text-white"
@@ -134,7 +134,7 @@ export const ANSWERS = {
               Email
             </Link>
           </li>
-          <li className="m-0 font-bold text-teal-400">
+          <li className="m-0 font-bold text-teal-400 hover:opacity-80">
             <Link
               href="https://www.linkedin.com/in/mcalderonbuono/"
               className="font-bold text-white"
@@ -143,7 +143,7 @@ export const ANSWERS = {
               Linkedin
             </Link>
           </li>
-          <li className="m-0 font-bold text-teal-400">
+          <li className="m-0 font-bold text-teal-400 hover:opacity-80">
             <Link
               href="https://github.com/maxiCalderonBuono"
               rel="noopener noreferrer"
@@ -151,7 +151,7 @@ export const ANSWERS = {
               Github
             </Link>
           </li>
-          <li className="m-0 font-bold text-teal-400">
+          <li className="m-0 font-bold text-teal-400 hover:opacity-80">
             <Link
               href="https://twitter.com/mcalderonbuono"
               rel="noopener noreferrer"
@@ -165,7 +165,7 @@ export const ANSWERS = {
           <a
             href="/data/maximilianoCalderónDeveloper.pdf"
             download="Maximiliano Calderón"
-            className="font-bold text-teal-400"
+            className="font-bold text-teal-400 hover:opacity-80"
           >
             Download
           </a>

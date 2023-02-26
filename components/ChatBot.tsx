@@ -5,7 +5,7 @@ import { getAiResponse } from "../helpers/getAiResponse";
 
 type Message = {
   id: string;
-  type: "bot" | "user";
+  type: "bot" | "user" | "error";
   text: React.ReactNode;
 };
 
@@ -23,8 +23,8 @@ export const ChatBot = ({ initialMessage }: Props) => {
             text: (
               <div className="flex items-center gap-2">
                 <img
-                  src="https://res.cloudinary.com/dvqlenul5/image/upload/v1677154574/571-5718065_bot-autoresponder-clipart_mj2gs1.webp"
                   alt="Codey face"
+                  src="https://res.cloudinary.com/dvqlenul5/image/upload/v1677154574/571-5718065_bot-autoresponder-clipart_mj2gs1.webp"
                   className="w-8 h-8"
                 />
                 <p className="m-0">{initialMessage}</p>
@@ -58,7 +58,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
       setIsLoading(false);
       setMessages((messages) =>
         messages.concat({
-          id: String(Date.now()),
+          id: String(Date.now() + 1),
           type: "bot",
           text: ANSWERS["me"],
         })
@@ -69,7 +69,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
       setIsLoading(false);
       setMessages((messages) =>
         messages.concat({
-          id: String(Date.now()),
+          id: String(Date.now() + 1),
           type: "bot",
           text: ANSWERS["job"],
         })
@@ -80,7 +80,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
       setIsLoading(false);
       setMessages((messages) =>
         messages.concat({
-          id: String(Date.now()),
+          id: String(Date.now() + 1),
           type: "bot",
           text: ANSWERS["tech"],
         })
@@ -91,15 +91,28 @@ export const ChatBot = ({ initialMessage }: Props) => {
 
     const response = await getAiResponse(question);
 
+    if (response.type === "error") {
+      setIsLoading(false);
+      setMessages((messages) =>
+        messages.concat({
+          id: String(Date.now()),
+          type: "error",
+          text: response.content,
+        })
+      );
+
+      return;
+    }
+
     setIsLoading(false);
 
-    setPrediction(response || "default");
+    setPrediction(response.content || "default");
 
     setMessages((messages) =>
       messages.concat({
         id: String(Date.now()),
         type: "bot",
-        text: ANSWERS[response] || ANSWERS["default"],
+        text: ANSWERS[response.content] || ANSWERS["default"],
       })
     );
   };
@@ -122,7 +135,9 @@ export const ChatBot = ({ initialMessage }: Props) => {
               className={`p-4 text-white max-w-[80%] rounded-3xl ${
                 message.type === "bot"
                   ? "bg-slate-600 self-start rounded-bl-none"
-                  : "bg-blue-500 self-end rounded-br-none"
+                  : message.type === "user"
+                  ? "bg-blue-500 self-end rounded-br-none"
+                  : "bg-red-300 self-start rounded-bl-none text-red-900 font-bold"
               }`}
             >
               {message.text}
@@ -145,7 +160,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
             className="flex-1 px-4 py-2 mb-0 bg-gray-800 border border-gray-400"
             type="text"
             autoComplete="off"
-            placeholder="Can you tell more abour your experience?"
+            placeholder="Can you tell more about your experience?"
             name="question"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}

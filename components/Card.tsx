@@ -5,20 +5,12 @@ import { Fragment, useState } from "react";
 export default function Card() {
   let [isOpen, setIsOpen] = useState(false);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
   return (
     <>
       <div className="flex items-center justify-center">
         <button
           type="button"
-          onClick={openModal}
+          onClick={() => setIsOpen(true)}
           className="px-4 py-2 text-sm font-bold text-white bg-yellow-500 rounded-md hover:bg-opacity-80 focus:outline-none"
         >
           Card
@@ -26,7 +18,11 @@ export default function Card() {
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={() => setIsOpen(false)}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
