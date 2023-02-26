@@ -160,7 +160,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
             className="flex-1 px-4 py-2 mb-0 bg-gray-800 border border-gray-400"
             type="text"
             autoComplete="off"
-            placeholder="Can you tell more about your experience?"
+            placeholder="Tell me about your experience..."
             name="question"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
