@@ -132,11 +132,11 @@ export const ChatBot = ({ initialMessage }: Props) => {
             <div
               key={message.id}
               ref={lastChild}
-              className={`p-4 text-white max-w-[80%] rounded-3xl ${
+              className={`p-4  max-w-[80%] rounded-3xl ${
                 message.type === "bot"
-                  ? "bg-slate-600 self-start rounded-bl-none"
+                  ? "bg-slate-600 self-start rounded-bl-none text-white"
                   : message.type === "user"
-                  ? "bg-blue-500 self-end rounded-br-none"
+                  ? "bg-blue-500 self-end rounded-br-none text-white"
                   : "bg-red-300 self-start rounded-bl-none text-red-900 font-bold"
               }`}
             >
