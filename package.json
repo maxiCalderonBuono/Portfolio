@@ -11,7 +11,6 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.7.1",
-    "react-rough-notation": "^1.0.3",
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {
