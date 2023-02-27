@@ -2,7 +2,6 @@ import Script from "next/script";
 import Layout from "../components/layout";
 import { ChatBot } from "../components/ChatBot";
 import Card from "../components/Card";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function Home() {
   return (
