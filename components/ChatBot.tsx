@@ -122,10 +122,14 @@ export const ChatBot = ({ initialMessage }: Props) => {
   }, [messages]);
 
   return (
-    <section>
-      <div className="relative p-4 border border-gray-400 rounded-lg">
+    <section className="relative ">
+      <div className="absolute left-auto w-64 h-64 bg-purple-300 rounded-full opacity-40 top-4 md:-left-0 lg:-left-8 filter blur-xl animate-blob"></div>
+      <div className="absolute left-0 right-0 w-64 h-64 m-auto bg-yellow-300 rounded-full sm:left-64 opacity-40 top-4 md:right-10 lg:-right-8 md:left-auto filter blur-xl animate-blob animation-delay-2000"></div>
+      <div className="absolute left-0 w-64 h-64 bg-pink-300 rounded-full opacity-40 md:left-64 md:top-4 -bottom-10 filter blur-xl animate-blob animation-delay-4000"></div>
+      <div className="absolute w-64 h-64 bg-green-300 rounded-full right-8 opacity-40 -bottom-8 lg:left-64 filter blur-xl animate-blob"></div>
+      <div className="relative p-4 bg-gray-900 border border-gray-400 rounded-lg">
         <div
-          className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto"
+          className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto "
           ref={container}
         >
           {messages.map((message) => (
@@ -157,7 +161,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
           onSubmit={handleSubmit}
         >
           <input
-            className="flex-1 px-4 py-2 mb-0 bg-gray-800 border border-gray-400"
+            className="flex-1 px-4 py-2 mb-0 bg-gray-800 border border-gray-400 rounded-md"
             type="text"
             autoComplete="off"
             placeholder="Tell me about your experience..."

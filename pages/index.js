@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Script from "next/script";
 import Layout from "../components/layout";
 import { ChatBot } from "../components/ChatBot";
 import Card from "../components/Card";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
             nerding out on code, you can find me riding my bike, hanging out
             with my family and friends, or exploring the great outdoors. 🌳
           </p>
-          <p>Welcome to my personal webpage!. Let´s get in touch 🚀.</p>
+          <p>Welcome to my personal webpage!. Let's get in touch 🚀.</p>
         </article>
       </section>
       <section className="mt-12">

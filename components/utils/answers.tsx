@@ -193,9 +193,9 @@ export const ANSWERS = {
           <li className="m-0"> 2- Are you looking for new opportunities?</li>
           <li className="m-0"> 3 -Which technologies do you know?</li>
         </ul>
-        <div className="flex flex-col items-center gap-2 mt-2 md:flex-row">
+        <div className="flex flex-col gap-2 mt-2 md:flex-row">
           <span>Do you wanna try? Type any number of that options</span>
-          <div className="flex gap-2">
+          <div className="flex justify-center gap-2">
             <div className="flex items-center justify-center w-6 h-6 bg-teal-400 rounded-full">
               1
             </div>
