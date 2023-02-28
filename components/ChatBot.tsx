@@ -161,7 +161,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
           onSubmit={handleSubmit}
         >
           <input
-            className="flex-1 px-4 py-2 mb-0 text-gray-900 border-2 border-gray-400 rounded-md dark:text-white bg-slate-200 dark:bg-gray-800 placeholder:text-gray-700 dark:placeholder:text-white"
+            className="flex-1 px-4 py-2 mb-0 text-gray-900 border-2 border-gray-400 rounded-md focus:border-gray-500 dark:focus:border-gray-300 focus:outline-none dark:text-white bg-slate-200 dark:bg-gray-800 placeholder:text-gray-700 dark:placeholder:text-white"
             type="text"
             autoComplete="off"
             placeholder="Tell me about your experience..."
