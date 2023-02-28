@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
 
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ export const siteTitle = "Maxi Calderón";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="max-w-[800px]  px-[1rem] mx-auto pt-[3rem] dark:bg-gray-900 text-white">
+    <div className="relative max-w-[800px]  px-[1rem] mx-auto pt-[3rem]  text-white">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Welcome to my portfolio" />
@@ -20,7 +19,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className="text-center">
         {home ? (
           <>
             <Image
@@ -29,9 +28,11 @@ export default function Layout({ children, home }) {
               height={160}
               width={160}
               alt={name}
-              className="rounded-full"
+              className="rounded-full "
             />
-            <h1 className="mt-4 text-4xl font-bold font-mona">{name}</h1>
+            <h1 className="mt-4 text-4xl font-bold text-gray-700 dark:text-white font-mona">
+              {name}
+            </h1>
           </>
         ) : (
           <>
@@ -43,10 +44,11 @@ export default function Layout({ children, home }) {
                   height={108}
                   width={108}
                   alt={name}
+                  className="border-2 border-gray-900 rounded-full"
                 />
               </a>
             </Link>
-            <h2>
+            <h2 className="mt-4 text-4xl font-bold text-gray-700 dark:text-white font-mona">
               <Link href="/">
                 <a>{name}</a>
               </Link>
@@ -55,7 +57,7 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      <footer className="flex justify-center py-6 font-bold">
+      <footer className="flex justify-center py-6 font-bold text-gray-700 dark:text-white">
         Built with 💗 &amp; ☕️ &amp; 🧉 &amp; AI
       </footer>
     </div>
