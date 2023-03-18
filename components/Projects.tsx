@@ -23,7 +23,7 @@ export const Projects = () => {
       whileInView={{ opacity: 1 }}
       className="relative z-0 flex flex-col items-center h-screen max-w-full mx-auto overflow-hidden md:flex-row justify-evenly"
     >
-      <h2 className="absolute py-2 text-3xl font-extrabold tracking-wide text-transparent top-32 bg-clip-text bg-gradient-to-r from-teal-500 to-teal-100">
+      <h2 className="absolute py-2 text-3xl font-extrabold tracking-wide text-transparent top-28 bg-clip-text bg-gradient-to-r from-teal-500 to-teal-100">
         PROJECTS
       </h2>
       <div className="w-full absolute  top-[30%] left-0 h-[350px] bg-blue-500/25 -skew-y-12"></div>

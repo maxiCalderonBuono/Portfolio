@@ -39,9 +39,6 @@ export default function Layout({ children, home }) {
       </Head>
       <Navbar setter={handleThemeMode} />
       <main>{children}</main>
-      <footer className="flex justify-center py-6 font-bold text-gray-700 dark:text-white">
-        Built with 💗 &amp; ☕️ &amp; 🧉 &amp; AI
-      </footer>
     </section>
   );
 }

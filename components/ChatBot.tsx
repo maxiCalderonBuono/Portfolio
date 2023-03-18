@@ -180,6 +180,9 @@ export const ChatBot = ({ initialMessage }: Props) => {
           </button>
         </form>
       </div>
+      <footer className="flex justify-center py-10 font-bold text-gray-700 dark:text-white snap-end">
+        Built with 💗 &amp; ☕️ &amp; 🧉 &amp; AI
+      </footer>
     </section>
   );
 };
