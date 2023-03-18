@@ -122,7 +122,7 @@ export const ChatBot = ({ initialMessage }: Props) => {
   }, [messages]);
 
   return (
-    <section className="relative">
+    <section className="absolute w-full px-5 top-64">
       <div className="absolute left-auto w-64 h-64 bg-purple-300 rounded-full opacity-40 top-4 md:-left-0 lg:-left-8 filter blur-xl animate-blob"></div>
       <div className="absolute left-0 right-0 w-64 h-64 m-auto bg-yellow-300 rounded-full sm:left-64 opacity-40 top-4 md:right-10 lg:-right-8 md:left-auto filter blur-xl animate-blob animation-delay-2000"></div>
       <div className="absolute left-0 w-64 h-64 bg-pink-300 rounded-full opacity-40 md:left-64 md:top-4 -bottom-10 filter blur-xl animate-blob animation-delay-4000"></div>

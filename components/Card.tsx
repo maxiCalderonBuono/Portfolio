@@ -7,11 +7,11 @@ export default function Card() {
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center md:hidden">
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="px-4 py-2 text-sm font-bold text-white bg-yellow-500 rounded-md hover:bg-opacity-80 focus:outline-none"
+          className="px-4 py-2 ml-8 leading-none text-white rounded-md bg-gradient-to-r from-yellow-500 to-yellow-400 hover:opacity-90"
         >
           Card
         </button>
