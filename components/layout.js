@@ -23,7 +23,7 @@ export default function Layout({ children, home }) {
 
   return (
     <section
-      className={`h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  ${
+      className={`h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-[#372C43] scrollbar-thumb-blue-500  ${
         darkMode ? "dark  bg-[#0E001C]" : "bg-gray-200"
       }`}
     >
