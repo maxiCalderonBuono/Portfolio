@@ -1,13 +1,6 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { ReactElement } from "react";
-import versatile from "../public/images/versatile-web.png";
-import diarymate from "../public/images/diarymate-web.png";
-import awsomenews from "../public/images/awsomenews-web.png";
-import calenly from "../public/images/calenly-web.png";
-import pokedelta from "../public/images/pokedelta-web.png";
-import heroes from "../public/images/heroes-web.png";
-import getpass from "../public/images/getpass-web.png";
-import library from "../public/images/library-web.png";
+
 import { AiFillGithub } from "react-icons/ai";
 import { IoMdOpen } from "react-icons/io";
 import { PROJECTS } from "./utils/projects";
@@ -15,7 +8,7 @@ import { motion } from "framer-motion";
 
 interface Project {
   name: string;
-  image: string;
+  image: StaticImageData;
   description: string;
   tech: React.ReactNode[];
   deploy: string;
