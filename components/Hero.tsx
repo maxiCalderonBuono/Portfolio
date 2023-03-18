@@ -33,11 +33,9 @@ const Hero = () => {
         <Image src={profile} alt="Maximiliano Calderón web developer" />
       </div>
 
-      <h2 className="text-xl font-medium md:text-2xl dark:text-white">
-        Web Developer
-      </h2>
+      <h2 className="text-2xl font-medium dark:text-white">Web Developer</h2>
 
-      <h3 className="text-2xl font-bold text-center text-transparent md:text-3xl bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
+      <h3 className="px-5 text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
         {text}
         <Cursor cursorColor="#EFC224" />
       </h3>
