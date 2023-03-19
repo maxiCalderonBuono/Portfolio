@@ -27,9 +27,9 @@ export const Projects = () => {
         PROJECTS
       </h2>
       <div className="w-full absolute  top-[30%] left-0 h-[350px] bg-blue-500/25 -skew-y-12"></div>
-      <div className="z-20 flex w-full pt-10 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
+      <div className="z-20 flex w-full   pt-10 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-[#372C43] scrollbar-thumb-blue-500 scrollbar">
         {PROJECTS.map((project: Project) => (
-          <div className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen p-5 space-y-5 md:p-20 snap-center">
+          <div className="flex flex-col items-center justify-center flex-shrink-0 w-screen p-5 space-y-5 md:p-20 snap-center">
             <motion.div
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}

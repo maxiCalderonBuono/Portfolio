@@ -10,10 +10,10 @@ export default function Home() {
       <div className="snap-start">
         <Hero />
       </div>
-      <div className="snap-center">
+      <div className="snap-start">
         <Projects />
       </div>
-      <div className="snap-end">
+      <div className="snap-start">
         <Contact />
       </div>
     </Layout>
