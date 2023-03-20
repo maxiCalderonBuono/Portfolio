@@ -7,15 +7,12 @@ import Hero from "../components/Hero";
 export default function Home() {
   return (
     <Layout>
-      <div className="snap-start">
-        <Hero />
-      </div>
-      <div className="snap-start">
+      <Hero />
+      <div>
         <Projects />
       </div>
-      <div className="snap-start">
-        <Contact />
-      </div>
+
+      <Contact />
     </Layout>
   );
 }

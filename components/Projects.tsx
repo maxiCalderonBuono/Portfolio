@@ -1,10 +1,12 @@
 import Image, { StaticImageData } from "next/image";
-import React, { ReactElement } from "react";
+import React, { useRef, useEffect } from "react";
 
 import { AiFillGithub } from "react-icons/ai";
 import { IoMdOpen } from "react-icons/io";
 import { PROJECTS } from "./utils/projects";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import ScrollTringger from "gsap/dist/ScrollTrigger";
 
 interface Project {
   name: string;
@@ -15,21 +17,49 @@ interface Project {
   repo: string;
 }
 
+gsap.registerPlugin(ScrollTringger);
+
 export const Projects = () => {
+  const scroller = useRef(null);
+
+  useEffect(() => {
+    let skillSet = gsap.utils.toArray(".skill-set");
+
+    let to = gsap.to(skillSet, {
+      xPercent: () => -100 * (skillSet.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: scroller.current,
+        markers: false,
+        pin: true,
+        pinSpacing: true,
+        scrub: 0,
+        invalidateOnRefresh: true,
+        anticipatePin: 0,
+        snap: 1 / (skillSet.length - 1),
+
+        end: () => "+=" + scroller.current.offsetWidth,
+      },
+    });
+
+    return () => {
+      to.kill();
+    };
+  }, []);
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
-      whileInView={{ opacity: 1 }}
-      className="relative z-0 flex flex-col items-center h-screen max-w-full mx-auto overflow-hidden md:flex-row justify-evenly"
-    >
-      <h2 className="absolute py-2 text-3xl font-extrabold tracking-wide text-transparent top-28 bg-clip-text bg-gradient-to-r from-teal-500 to-teal-100">
-        PROJECTS
-      </h2>
-      <div className="w-full absolute  top-[30%] left-0 h-[350px] bg-blue-500/25 -skew-y-12"></div>
-      <div className="z-20 flex w-full   pt-10 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-[#372C43] scrollbar-thumb-blue-500 scrollbar">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0E001C] to-[#28044d]">
+      <div
+        id="skills"
+        ref={scroller}
+        className=" flex  overflow-x-hidden text-white w-[900vw] m-0  relative h-screen"
+      >
+        <h3 className="absolute px-5 text-3xl font-bold text-transparent top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+          PROJECTS
+        </h3>
+
         {PROJECTS.map((project: Project) => (
-          <div className="flex flex-col items-center justify-center flex-shrink-0 w-screen p-5 space-y-5 md:p-20 snap-center">
+          <section className="z-50 flex items-center justify-center w-screen h-full gap-10 px-12 bg-transparent skill-set ns-horizontal-section__item">
             <motion.div
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
@@ -39,30 +69,12 @@ export const Projects = () => {
               <Image
                 src={project.image}
                 alt={`screenshot from ${project.name} web`}
-                width={350}
-                height={350}
+                width={600}
+                height={600}
               />
             </motion.div>
-            {/* <div className="relative items-center justify-center overflow-hidden transition-shadow cursor-pointer group hover:shadow-xl hover:shadow-black/30">
-              <Image
-                src={project.image}
-                alt={`screenshot from ${project.name} web`}
-                className="object-cover w-full h-full transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                width={350}
-                height={350}
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-              <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                <p className="mb-3 text-lg italic text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  {project.description}
-                </p>
-                <button className="px-4 py-2 ml-8 text-sm text-white rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-90">
-                  See More
-                </button>
-              </div>
-            </div> */}
 
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-5 md:text-left">
               <div className="flex justify-center gap-4">
                 {project.tech.map((logo: React.ReactNode) => (
                   <span className="w-10 h-10">{logo}</span>
@@ -74,7 +86,7 @@ export const Projects = () => {
               <h3 className="text-center dark:text-white md:text-left">
                 {project.description}
               </h3>
-              <div className="flex justify-center gap-4 mt-4 text-3xl dark:text-lime-100">
+              <div className="flex justify-center gap-4 mt-4 text-4xl dark:text-lime-100">
                 <a
                   href={project.repo}
                   rel="noreferrer noopener"
@@ -91,9 +103,11 @@ export const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </section>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
+
+//

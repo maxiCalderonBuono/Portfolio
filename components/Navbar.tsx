@@ -11,7 +11,7 @@ const Navbar = ({ setter }) => {
           initial={{ x: -500, opacity: 0, scale: 0.4 }}
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.3 }}
-          className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white"
+          className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white "
         >
           <span className="text-yellow-500">{"<"}</span>maxcal
           <span className="text-blue-500">{"/"}</span>
