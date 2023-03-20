@@ -54,28 +54,28 @@ export const Projects = () => {
         ref={scroller}
         className=" flex  overflow-x-hidden text-white w-[900vw] m-0  relative h-screen"
       >
-        <h3 className="absolute px-5 text-3xl font-bold text-transparent top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+        <h3 className="absolute flex justify-center px-5 text-3xl font-bold text-transparent w-[100vw] top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
           PROJECTS
         </h3>
-
         {PROJECTS.map((project: Project) => (
-          <section className="z-50 flex items-center justify-center w-screen h-full gap-10 px-12 bg-transparent skill-set ns-horizontal-section__item">
+          <section className="z-50 flex items-center justify-center w-screen h-full gap-10 px-12 bg-transparent pt-28 skill-set ns-horizontal-section__item">
             <motion.div
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
+              className="relative w-[850px] h-[470px]"
             >
               <Image
                 src={project.image}
                 alt={`screenshot from ${project.name} web`}
-                width={600}
-                height={600}
+                fill
+                className="rounded-md object-fit"
               />
             </motion.div>
 
-            <div className="flex flex-col space-y-5 md:text-left">
-              <div className="flex justify-center gap-4">
+            <div className="flex flex-col w-1/4 space-y-5 md:text-left">
+              <div className="flex flex-wrap justify-center gap-4">
                 {project.tech.map((logo: React.ReactNode) => (
                   <span className="w-10 h-10">{logo}</span>
                 ))}
@@ -83,7 +83,7 @@ export const Projects = () => {
               <h4 className="text-4xl text-center dark:text-white">
                 {project.name}
               </h4>
-              <h3 className="text-center dark:text-white md:text-left">
+              <h3 className="text-center dark:text-white md:text-center">
                 {project.description}
               </h3>
               <div className="flex justify-center gap-4 mt-4 text-4xl dark:text-lime-100">
