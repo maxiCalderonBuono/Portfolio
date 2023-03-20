@@ -122,15 +122,15 @@ export const ChatBot = ({ initialMessage }: Props) => {
   }, [messages]);
 
   return (
-    <section className="w-full px-5 md:w-3/5">
-      <div className="absolute left-auto w-64 h-64 bg-purple-300 rounded-full opacity-40 top-4 md:-left-0 lg:top-28 lg:left-56 filter blur-xl animate-blob"></div>
+    <section className="w-full px-5 mt-5 md:w-3/5">
+      {/* <div className="absolute left-auto w-64 h-64 bg-purple-300 rounded-full opacity-40 top-4 md:-left-0 lg:top-28 lg:left-56 filter blur-xl animate-blob"></div>
       <div className="absolute left-0 right-0 w-64 h-64 m-auto bg-yellow-300 rounded-full sm:left-64 opacity-40 top-10 md:right-10 lg:right-56 md:left-auto filter blur-xl animate-blob animation-delay-2000"></div>
       <div className="absolute left-0 w-64 h-64 bg-pink-300 rounded-full opacity-40 md:left-96 md:top-4 -bottom-10 filter blur-xl animate-blob animation-delay-4000"></div>
       <div className="absolute w-64 h-64 bg-blue-300 rounded-full opacity-40 md:right-48 top-28 filter blur-xl animate-blob animation-delay-4000"></div>
-      <div className="absolute w-64 h-64 bg-green-300 rounded-full right-8 opacity-40 bottom-4 lg:left-96 filter blur-xl animate-blob"></div>
-      <div className="relative p-4 border border-gray-400 rounded-lg dark:bg-gray-900 bg-slate-200">
+      <div className="absolute w-64 h-64 bg-green-300 rounded-full right-8 opacity-40 bottom-4 lg:left-96 filter blur-xl animate-blob"></div> */}
+      <div className="relative p-4 border border-gray-400 rounded-lg dark:bg-gray-900 bg-slate-200 ">
         <div
-          className="flex flex-col w-full gap-4 h-[350px] overflow-y-auto "
+          className="flex flex-col w-full gap-4 md:h-[350px] h-[400px] overflow-y-auto "
           ref={container}
         >
           {messages.map((message) => (

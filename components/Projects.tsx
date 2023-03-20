@@ -52,19 +52,19 @@ export const Projects = () => {
       <div
         id="skills"
         ref={scroller}
-        className=" flex  overflow-x-hidden text-white w-[900vw] m-0  relative h-screen"
+        className=" flex overflow-x-hidden text-white w-[900vw] m-0  relative h-screen"
       >
-        <h3 className="absolute flex justify-center px-5 text-3xl font-bold text-transparent w-[100vw] top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+        <h3 className="absolute flex justify-center px-5 text-3xl font-bold text-transparent w-[100vw] top-32 md:top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
           PROJECTS
         </h3>
         {PROJECTS.map((project: Project) => (
-          <section className="z-50 flex items-center justify-center w-screen h-full gap-10 px-12 bg-transparent pt-28 skill-set ns-horizontal-section__item">
+          <section className="z-50 flex flex-col items-center justify-center w-screen h-full gap-10 px-12 bg-transparent md:flex-row pt-28 skill-set ns-horizontal-section__item">
             <motion.div
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="relative w-[850px] h-[470px]"
+              className="relative w-full h-[200px] md:w-[850px] md:h-[470px]"
             >
               <Image
                 src={project.image}
@@ -74,13 +74,13 @@ export const Projects = () => {
               />
             </motion.div>
 
-            <div className="flex flex-col w-1/4 space-y-5 md:text-left">
+            <div className="flex flex-col w-full space-y-5 md:w-1/4 md:text-left">
               <div className="flex flex-wrap justify-center gap-4">
                 {project.tech.map((logo: React.ReactNode) => (
                   <span className="w-10 h-10">{logo}</span>
                 ))}
               </div>
-              <h4 className="text-4xl text-center dark:text-white">
+              <h4 className="text-3xl text-center md:text-4xl dark:text-white">
                 {project.name}
               </h4>
               <h3 className="text-center dark:text-white md:text-center">
