@@ -46,7 +46,7 @@ export const Projects = () => {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="md:w-[600px] md:h-[350px] flex justify-center"
+                className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]"
               >
                 <Image
                   src={project.image}
