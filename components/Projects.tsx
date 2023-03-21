@@ -40,20 +40,20 @@ export const Projects = () => {
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
-            <div className="flex flex-col items-center justify-center gap-8 px-5 pb-12 md:flex-row">
-              <motion.div
-                initial={{ y: -300, opacity: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]"
-              >
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1 }}
+              className="flex flex-col items-center justify-center gap-8 px-5 pb-12 md:flex-row"
+            >
+              <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]">
                 <Image
                   src={project.image}
                   alt={`screenshot from ${project.name} web`}
                   className="rounded-md object-fit"
                 />
-              </motion.div>
+              </div>
 
               <div className="w-full space-y-5 md:w-1/3 md:text-left">
                 <div className="flex flex-wrap justify-center gap-4">
@@ -84,7 +84,7 @@ export const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
