@@ -13,10 +13,10 @@ const Hero = () => {
   const [text, count] = useTypewriter({
     words: [
       "Hi, I'm Maxi Calderón",
-      "Guy-who-loves-technology.tsx",
+      "Loves-technology.tsx",
       "< ButLovesToCodeMore />",
       "() => Ferrari cars fan",
-      "{ address: citizen of the world }",
+      "{ address: worldwide }",
     ],
     loop: true,
     delaySpeed: 2000,

@@ -8,6 +8,13 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTringger from "gsap/dist/ScrollTrigger";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 interface Project {
   name: string;
   image: StaticImageData;
@@ -17,95 +24,70 @@ interface Project {
   repo: string;
 }
 
-gsap.registerPlugin(ScrollTringger);
-
 export const Projects = () => {
-  const scroller = useRef(null);
-
-  useEffect(() => {
-    let skillSet = gsap.utils.toArray(".skill-set");
-
-    let to = gsap.to(skillSet, {
-      xPercent: () => -100 * (skillSet.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: scroller.current,
-        markers: false,
-        pin: true,
-        pinSpacing: true,
-        scrub: 0,
-        invalidateOnRefresh: true,
-        anticipatePin: 0,
-        snap: 1 / (skillSet.length - 1),
-
-        end: () => "+=" + scroller.current.offsetWidth,
-      },
-    });
-
-    return () => {
-      to.kill();
-    };
-  }, []);
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0E001C] to-[#28044d]">
-      <div
-        id="skills"
-        ref={scroller}
-        className=" flex overflow-x-hidden text-white w-[900vw] m-0  relative h-screen"
+    <section className=" w-full md:h-screen bg-gradient-to-b from-[#0E001C] to-[#28044d]">
+      <h3 className="flex justify-center px-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+        PROJECTS
+      </h3>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
       >
-        <h3 className="absolute flex justify-center px-5 text-3xl font-bold text-transparent w-[100vw] top-32 md:top-24 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
-          PROJECTS
-        </h3>
         {PROJECTS.map((project: Project) => (
-          <section className="z-50 flex flex-col items-center justify-center w-screen h-full gap-10 px-12 bg-transparent md:flex-row pt-28 skill-set ns-horizontal-section__item">
-            <motion.div
-              initial={{ y: -300, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="relative w-full h-[200px] md:w-[850px] md:h-[470px]"
-            >
-              <Image
-                src={project.image}
-                alt={`screenshot from ${project.name} web`}
-                fill
-                className="rounded-md object-fit"
-              />
-            </motion.div>
+          <SwiperSlide>
+            <div className="flex flex-col items-center justify-center gap-8 px-5 pb-12 md:flex-row">
+              <motion.div
+                initial={{ y: -300, opacity: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="md:w-[600px] md:h-[350px] flex justify-center"
+              >
+                <Image
+                  src={project.image}
+                  alt={`screenshot from ${project.name} web`}
+                  className="rounded-md object-fit"
+                />
+              </motion.div>
 
-            <div className="flex flex-col w-full space-y-5 md:w-1/4 md:text-left">
-              <div className="flex flex-wrap justify-center gap-4">
-                {project.tech.map((logo: React.ReactNode) => (
-                  <span className="w-10 h-10">{logo}</span>
-                ))}
-              </div>
-              <h4 className="text-3xl text-center md:text-4xl dark:text-white">
-                {project.name}
-              </h4>
-              <h3 className="text-center dark:text-white md:text-center">
-                {project.description}
-              </h3>
-              <div className="flex justify-center gap-4 mt-4 text-4xl dark:text-lime-100">
-                <a
-                  href={project.repo}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <AiFillGithub className="transform cursor-pointer hover:scale-105 active:scale-95" />
-                </a>
-                <a
-                  href={project.deploy}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <IoMdOpen className="transform cursor-pointer hover:scale-105 active:scale-95" />
-                </a>
+              <div className="w-full space-y-5 md:w-1/3 md:text-left">
+                <div className="flex flex-wrap justify-center gap-4">
+                  {project.tech.map((logo: React.ReactNode) => (
+                    <span className="w-10 h-10">{logo}</span>
+                  ))}
+                </div>
+                <h4 className="text-3xl text-center md:text-4xl dark:text-white">
+                  {project.name}
+                </h4>
+                <h3 className="text-center dark:text-white md:text-center">
+                  {project.description}
+                </h3>
+                <div className="flex justify-center gap-4 mt-4 text-4xl dark:text-lime-100">
+                  <a
+                    href={project.repo}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <AiFillGithub className="transform cursor-pointer hover:scale-105 active:scale-95" />
+                  </a>
+                  <a
+                    href={project.deploy}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <IoMdOpen className="transform cursor-pointer hover:scale-105 active:scale-95" />
+                  </a>
+                </div>
               </div>
             </div>
-          </section>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 };
