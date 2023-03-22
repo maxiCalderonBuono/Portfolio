@@ -8,9 +8,9 @@ const Navbar = ({ setter }) => {
     <header className="sticky top-0 z-20 flex justify-center w-full px-5 backdrop-blur-md">
       <nav className="flex justify-between w-full pt-8 pb-2 max-w-7xl ">
         <motion.h1
-          initial={{ x: -500, opacity: 0, scale: 0.4 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 1.3 }}
+          initial={{ y: "100%", opacity: 0, scale: 0.4 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2 }}
           className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white "
         >
           <span className="text-yellow-500">{"<"}</span>maxcal
@@ -19,8 +19,8 @@ const Navbar = ({ setter }) => {
         </motion.h1>
         <motion.ul
           className="flex items-center"
-          initial={{ x: 500, opacity: 0, scale: 0.4 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
+          initial={{ y: "100%", opacity: 0, scale: 0.4 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
         >
           <li className="text-gray-900 transform hover:scale-105 active:scale-95 dark:text-white">
