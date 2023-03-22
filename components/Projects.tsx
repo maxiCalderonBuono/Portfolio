@@ -26,8 +26,8 @@ interface Project {
 
 export const Projects = () => {
   return (
-    <section className=" w-full md:h-screen bg-gradient-to-b from-[#0E001C] to-[#28044d]">
-      <h3 className="flex justify-center px-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+    <section className=" w-full h-[calc(100vh-72px)] bg-gradient-to-b from-[#0E001C] to-[#28044d] md:pt-8 md:pb-16 ">
+      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent md:h-1/6 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
       <Swiper
@@ -37,6 +37,7 @@ export const Projects = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
+        className="h-5/6"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
@@ -45,7 +46,7 @@ export const Projects = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center gap-8 px-5 pb-12 md:flex-row"
+              className="flex flex-col items-center justify-center h-full gap-10 px-5 md:gap-8 md:flex-row"
             >
               <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]">
                 <Image
@@ -56,7 +57,7 @@ export const Projects = () => {
               </div>
 
               <div className="w-full space-y-5 md:w-1/3 md:text-left">
-                <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex flex-wrap justify-center gap-4 px-5">
                   {project.tech.map((logo: React.ReactNode) => (
                     <span className="w-10 h-10">{logo}</span>
                   ))}

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const Navbar = ({ setter }) => {
   return (
-    <header className="fixed top-0 z-20 flex justify-center w-full px-5 backdrop-blur-md">
-      <nav className="flex justify-between w-full pt-8 pb-4 max-w-7xl ">
+    <header className="sticky top-0 z-20 flex justify-center w-full px-5 backdrop-blur-md">
+      <nav className="flex justify-between w-full pt-8 pb-2 max-w-7xl ">
         <motion.h1
           initial={{ x: -500, opacity: 0, scale: 0.4 }}
           animate={{ x: 0, opacity: 1, scale: 1 }}
