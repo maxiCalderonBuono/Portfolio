@@ -26,7 +26,7 @@ interface Project {
 
 export const Projects = () => {
   return (
-    <section className=" w-full min-h-[calc(100vh-72px)] bg-gradient-to-b from-[#0E001C] to-[#28044d] md:pt-8 md:pb-16 my-1">
+    <section className=" w-full min-h-[calc(100vh-72px)] bg-gradient-to-b from-[#0E001C] to-[#28044d] md:pt-8 md:pb-16">
       <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent md:h-1/6 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
