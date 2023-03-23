@@ -43,7 +43,7 @@ const Hero = () => {
       <p className="max-w-3xl px-5 leading-8 tracking-widest text-gray-600 text-md dark:text-gray-300 md:text-md">
         Bringing ideas to life with creativity and technology. Let's make
         something extraordinary together. Join me down below and{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r dark:from-yellow-300 dark:to-lime-200 from-[#3a175d] to-[#28044d]">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r dark:from-yellow-300 dark:to-lime-200 from-purple-900 to-purple-700">
           let's get cracking!
         </span>
       </p>
