@@ -47,7 +47,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1 }}
               className="flex flex-col items-center justify-center flex-1 h-full gap-10 px-5 lg:gap-8 lg:flex-row"
             >
-              <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px] sm:h-[300px] sm:w-[550px] md:px-5 lg:w-[650px]">
+              <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[250px] sm:h-[300px] sm:w-[550px] md:px-5 lg:w-[650px]">
                 <Image
                   src={project.image}
                   alt={`screenshot from ${project.name} web`}
