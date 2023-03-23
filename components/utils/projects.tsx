@@ -46,7 +46,7 @@ export const PROJECTS = [
     name: "Awsomenews",
     image: awsomenews,
     description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+      "A Gatsby page showcasing embedded Hacker News content through iframes, created as part of a frontend challenge",
     tech: [
       <LOGOS.GatsbyIcon />,
       <LOGOS.StyledComponentsIcon />,
@@ -60,7 +60,7 @@ export const PROJECTS = [
     name: "Calenly",
     image: calenly,
     description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+      "A big calendar web, featuring the ability to create, store, modify, and delete events, with multi-user support",
     tech: [
       <LOGOS.ReactIcon />,
       <LOGOS.ReduxIcon />,
@@ -80,7 +80,7 @@ export const PROJECTS = [
     name: "PokeDelta",
     image: pokedelta,
     description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+      "A Pokedex web app with filters, cached data from queries, and customizable entry display",
     tech: [
       <LOGOS.TypescriptIcon />,
       <LOGOS.ReactIcon />,
@@ -96,7 +96,7 @@ export const PROJECTS = [
     name: "Masked Heroes",
     image: heroes,
     description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+      "A web built using React Router to navigate through entries by ID and featuring a search component.",
     tech: [
       <LOGOS.ReactIcon />,
       <LOGOS.ReactRouterIcon />,
@@ -108,8 +108,7 @@ export const PROJECTS = [
   {
     name: "GiftExpert",
     image: giftexpert,
-    description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+    description: "A web page built to master Fetch API using React",
     tech: [<LOGOS.ReactIcon />, <LOGOS.StyledComponentsIcon />],
     deploy: "https://maxicalderonbuono.github.io/react-gifexpertapp/",
     repo: "https://github.com/maxiCalderonBuono/react-gifexpertapp",
@@ -117,8 +116,7 @@ export const PROJECTS = [
   {
     name: "Library",
     image: library,
-    description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+    description: "My first work with a team and React application",
     tech: [
       <LOGOS.ReactIcon />,
       <LOGOS.ReactRouterIcon />,
@@ -132,7 +130,7 @@ export const PROJECTS = [
     name: "GetPass",
     image: getpass,
     description:
-      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+      "My very first project, marking the start of my wonderful journey into web programming.",
     tech: [<LOGOS.HTMLIcon />, <LOGOS.CSSIcon />, <LOGOS.JavascriptIcon />],
     deploy: "https://getpassapp.netlify.app/",
     repo: "https://github.com/maxiCalderonBuono/GetPass",

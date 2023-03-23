@@ -26,18 +26,17 @@ interface Project {
 
 export const Projects = () => {
   return (
-    <section className="w-full min-h-[calc(100vh-72px)]  md:pt-8 md:pb-16 bg-gradient-to-b from-[#0E001C] to-[#28044d] ">
-      <h3 className="flex items-center justify-center px-5 py-8 text-3xl font-bold text-transparent md:py-0 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+    <section className="w-full min-h-[calc(100vh-72px)]  lg:pt-8 md:pb-16 dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#28044d] px-5 ">
+      <h3 className="flex items-center justify-center px-5 py-8 text-3xl font-bold text-transparent lg:py-0 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        className="md:h-[550px] mt-10 md:mt-0"
+        className="lg:h-[550px] mt-10 md:mt-0"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
@@ -46,9 +45,9 @@ export const Projects = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center flex-1 h-full gap-10 px-5 md:gap-8 md:flex-row"
+              className="flex flex-col items-center justify-center flex-1 h-full gap-10 px-5 lg:gap-8 lg:flex-row"
             >
-              <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]">
+              <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px] sm:h-[300px] sm:w-[550px] px-5 lg:w-[650px]">
                 <Image
                   src={project.image}
                   alt={`screenshot from ${project.name} web`}
@@ -56,7 +55,7 @@ export const Projects = () => {
                 />
               </div>
 
-              <div className="w-full space-y-5 md:w-1/3 md:text-left">
+              <div className="w-full px-5 space-y-5 lg:w-1/3 md:text-left">
                 <div className="flex flex-wrap justify-center gap-4 px-5">
                   {project.tech.map((logo: React.ReactNode) => (
                     <span className="w-10 h-10">{logo}</span>

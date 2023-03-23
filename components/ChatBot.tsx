@@ -122,12 +122,12 @@ export const ChatBot = ({ initialMessage }: Props) => {
   }, [messages]);
 
   return (
-    <section className="w-full px-5  md:w-3/5">
-      <div className="absolute left-auto w-48 h-48 bg-purple-300 rounded-full md:w-64 md:h-64 opacity-40 top-48 md:top-4 md:-left-0 lg:top-28 lg:left-56 filter blur-xl animate-blob"></div>
-      <div className="absolute left-0 right-0 w-48 h-48 m-auto bg-yellow-300 rounded-full md:w-64 md:h-64 opacity-40 top-36 md:top-10 md:right-10 lg:right-56 md:left-auto filter blur-xl animate-blob animation-delay-2000"></div>
-      <div className="absolute left-0 w-48 h-48 bg-pink-300 rounded-full md:w-64 md:h-64 opacity-40 md:left-96 md:top-4 md:-bottom-10 bottom-4 filter blur-xl animate-blob animation-delay-4000"></div>
-      <div className="absolute w-48 h-48 bg-blue-300 rounded-full right-10 md:w-64 md:h-64 opacity-40 md:right-48 bottom-48 md:top-28 filter blur-xl animate-blob animation-delay-4000"></div>
-      <div className="absolute w-48 h-48 bg-green-300 rounded-full md:w-64 md:h-64 md:right-8 right-10 opacity-40 bottom-4 lg:left-96 filter blur-xl animate-blob"></div>
+    <section className="w-full px-5 md: md:max-w-[900px] relative">
+      <div className="absolute left-auto w-48 h-48 bg-purple-300 rounded-full -top-5 md:w-64 md:h-64 opacity-40 md:top-4 md:-left-8 filter blur-xl animate-blob"></div>
+      <div className="absolute left-0 right-0 w-48 h-48 m-auto bg-yellow-300 rounded-full md:w-64 md:h-64 opacity-40 -top-5 md:top-6 md:right-12 lg:right-6 md:left-auto filter blur-xl animate-blob animation-delay-2000"></div>
+      <div className="absolute left-0 w-48 h-48 bg-pink-300 rounded-full md:w-64 md:h-64 opacity-40 md:left-[400px] md:top-4 md:-bottom-10 bottom-20 filter blur-xl animate-blob animation-delay-4000"></div>
+      <div className="absolute w-48 h-48 bg-blue-300 rounded-full right-10 md:w-64 md:h-64 opacity-40 md:right-48 -bottom-5 md:-bottom-12 filter blur-xl animate-blob animation-delay-4000"></div>
+      <div className="absolute w-48 h-48 bg-green-300 rounded-full md:w-64 md:h-64 md:left-8 right-10 opacity-40 md:-bottom-12 -bottom-6 filter blur-xl animate-blob "></div>
       <div className="relative p-4 border border-gray-400 rounded-lg dark:bg-gray-900 bg-slate-200 ">
         <div
           className="flex flex-col w-full gap-4 md:h-[350px] h-[400px] overflow-y-auto "

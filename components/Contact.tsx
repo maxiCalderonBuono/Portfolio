@@ -4,7 +4,7 @@ import { ChatBot } from "./ChatBot";
 
 const Contact = () => {
   return (
-    <section className="relative flex flex-col min-h-[calc(100vh-72px)]  items-center justify-evenly pt-5 max-w-full  mx-auto bg-gradient-to-b from-[#28044d] to-[#0E001C]">
+    <section className="flex flex-col min-h-[calc(100vh-72px)]  items-center justify-evenly pt-5 max-w-full  mx-auto dark:bg-gradient-to-b dark:from-[#28044d] dark:to-[#0E001C]">
       <p className="px-5 mb-3 text-lg font-bold text-center text-gray-700 md:text-2xl dark:text-white">
         Want to know more about me? Ask my personal assistant 🤖
       </p>
