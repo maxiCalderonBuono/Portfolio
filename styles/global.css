@@ -18,6 +18,10 @@
   }
 }
 
+.pagination {
+  @apply pb-10 !important;
+}
+
 html,
 body {
   padding: 0;

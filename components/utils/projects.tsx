@@ -66,7 +66,7 @@ export const PROJECTS = [
       <LOGOS.ReduxIcon />,
       <LOGOS.ReactRouterIcon />,
       <LOGOS.TailwindIcon />,
-      <LOGOS.HeadlessIcon />,
+
       <LOGOS.NodeIcon />,
       <LOGOS.ExpressIcon />,
       <LOGOS.JWTIcon />,

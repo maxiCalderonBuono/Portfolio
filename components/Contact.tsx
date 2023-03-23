@@ -9,9 +9,9 @@ const Contact = () => {
         Want to know more about me? Ask my personal assistant 🤖
       </p>
       <ChatBot initialMessage="Someone out there?" />
-      <footer className="flex flex-col items-center justify-center gap-3 py-4 font-bold text-gray-700 dark:text-white">
+      <footer className="flex flex-col items-center justify-center gap-3 py-4 font-bold text-gray-800 dark:text-white">
         <p>Built with 💗 &amp; ☕️ &amp; 🧉 &amp; AI</p>
-        <p className="text-sm text-zinc-200 dark:text-zinc-500">
+        <p className="text-sm dark:text-zinc-200 text-zinc-500">
           © 2023 Maxi Calderón. All rights reserved.
         </p>
       </footer>

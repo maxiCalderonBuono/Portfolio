@@ -36,7 +36,7 @@ export const Projects = () => {
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        className="lg:h-[550px] mt-10 md:mt-0"
+        className="lg:h-[550px] mt-10 md:mt-0 pagination"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
