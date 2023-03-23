@@ -23,11 +23,12 @@ interface Project {
   deploy: string;
   repo: string;
 }
+// bg-gradient-to-b from-[#0E001C] to-[#28044d]
 
 export const Projects = () => {
   return (
-    <section className=" w-full min-h-[calc(100vh-72px)] bg-gradient-to-b from-[#0E001C] to-[#28044d] md:pt-8 md:pb-16">
-      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent md:h-1/6 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+    <section className="w-full md:min-h-[calc(100vh-72px)] max-h-[calc(100vh-72px)] md:pt-8 md:pb-16 bg-gradient-to-b from-[#0E001C] to-[#28044d]">
+      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
       <Swiper
@@ -37,7 +38,7 @@ export const Projects = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        className="h-5/6"
+        className="md:h-[550px] mt-10 md:mt-0"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
@@ -46,7 +47,7 @@ export const Projects = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center h-full gap-10 px-5 md:gap-8 md:flex-row"
+              className="flex flex-col items-center justify-center flex-1 h-full gap-10 px-5 md:gap-8 md:flex-row"
             >
               <div className="md:w-[600px] md:h-[350px] flex justify-center w-full h-[200px]">
                 <Image

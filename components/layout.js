@@ -24,7 +24,7 @@ export default function Layout({ children, home }) {
   return (
     <section
       className={` scrollbar-track-[#372C43] scrollbar-thumb-blue-500 scrollbar  ${
-        darkMode ? "dark  bg-[#0E001C]" : "bg-gray-200"
+        darkMode ? "dark bg-[#0E001C]" : ""
       }`}
     >
       <Head>
