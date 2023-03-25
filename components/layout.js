@@ -15,9 +15,14 @@ export default function Layout({ children, home }) {
   };
 
   useEffect(() => {
+    const systemColorPreference = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode !== null) {
       setDarkMode(savedMode === "true");
+    } else {
+      setDarkMode(systemColorPreference);
     }
   }, []);
 

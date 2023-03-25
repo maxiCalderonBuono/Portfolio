@@ -13,7 +13,7 @@ const Navbar = ({ setter }) => {
           transition={{ duration: 1.2 }}
           className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white "
         >
-          <span className="text-yellow-500">{"<"}</span>maxcal
+          <span className="text-yellow-500">{"<"}</span>MaxCal
           <span className="text-blue-500">{"/"}</span>
           <span className="text-yellow-500">{">"}</span>
         </motion.h1>

@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.12",
+    "daisyui": "^2.51.5",
     "framer-motion": "^10.3.2",
     "gsap": "^3.11.5",
     "next": "latest",

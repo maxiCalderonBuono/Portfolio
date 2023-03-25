@@ -9,17 +9,23 @@ import gsap from "gsap";
 import ScrollTringger from "gsap/dist/ScrollTrigger";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Autoplay, Keyboard } from "swiper";
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
+interface Tech {
+  name: string;
+  logo: React.ReactNode;
+}
 
 interface Project {
   name: string;
   image: StaticImageData;
   description: string;
-  tech: React.ReactNode[];
+  tech: Tech[];
   deploy: string;
   repo: string;
 }
@@ -33,7 +39,13 @@ export const Projects = () => {
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay, Keyboard]}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        keyboard={{ enabled: true }}
+        loop={true}
         navigation
         pagination={{ clickable: true }}
         className="lg:h-[550px] mt-10 md:mt-0 pagination"
@@ -56,15 +68,21 @@ export const Projects = () => {
               </div>
 
               <div className="w-full px-5 space-y-5 lg:w-1/3 md:text-left">
-                <div className="flex flex-wrap justify-center gap-4 px-5">
-                  {project.tech.map((logo: React.ReactNode) => (
-                    <span className="w-10 h-10">{logo}</span>
+                <div className="flex flex-wrap justify-center gap-4 px-5 lg:px-0">
+                  {project.tech.map(({ name, logo }) => (
+                    <span
+                      title={name}
+                      className="w-10 h-10 tooltip tooltip-primary dark:tooltip-info"
+                      data-tip={name}
+                    >
+                      {logo}
+                    </span>
                   ))}
                 </div>
-                <h4 className="text-3xl text-center md:text-4xl dark:text-white">
+                <h4 className="text-3xl text-center text-gray-900 md:text-4xl dark:text-white">
                   {project.name}
                 </h4>
-                <h3 className="text-center dark:text-white md:text-center">
+                <h3 className="text-center text-gray-900 dark:text-white md:text-center">
                   {project.description}
                 </h3>
                 <div className="flex justify-center gap-4 mt-4 text-4xl dark:text-lime-100">
@@ -73,14 +91,14 @@ export const Projects = () => {
                     rel="noreferrer noopener"
                     target="_blank"
                   >
-                    <AiFillGithub className="transform cursor-pointer hover:scale-105 active:scale-95" />
+                    <AiFillGithub className="text-gray-900 transform cursor-pointer hover:scale-110 active:scale-95 dark:text-fuchsia-300" />
                   </a>
                   <a
                     href={project.deploy}
                     rel="noreferrer noopener"
                     target="_blank"
                   >
-                    <IoMdOpen className="transform cursor-pointer hover:scale-105 active:scale-95" />
+                    <IoMdOpen className="text-green-500 transform cursor-pointer hover:scale-110 active:scale-95" />
                   </a>
                 </div>
               </div>
