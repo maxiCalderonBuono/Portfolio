@@ -23,10 +23,8 @@ const Hero = () => {
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.1 }}
+    <motion.section
+      id="hero"
       className="flex flex-col items-center justify-center space-y-8 text-center min-h-[calc(100vh-72px)] md:pb-10 dark:bg-gradient-to-b dark:from-[#0E001C] dark:to-[#3a175d]"
     >
       <div className="w-40 h-40 mx-auto overflow-hidden rounded-full bg-gradient-to-b from-blue-500 to-cyan-500 ">
@@ -71,7 +69,7 @@ const Hero = () => {
           <AiFillGithub className="transform cursor-pointer hover:scale-110 active:scale-95" />
         </a>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

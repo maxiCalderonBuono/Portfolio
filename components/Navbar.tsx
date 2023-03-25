@@ -1,22 +1,28 @@
 import React from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import Card from "./Card";
+
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = ({ setter }) => {
   return (
     <header className="sticky top-0 z-20 flex justify-center w-full px-5 backdrop-blur-md ">
       <nav className="flex justify-between w-full pt-8 pb-2 max-w-7xl ">
-        <motion.h1
-          initial={{ y: "100%", opacity: 0, scale: 0.4 }}
-          animate={{ y: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2 }}
-          className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white "
+        <Link
+          href="#hero"
+          className="transform hover:scale-110 active:scale-95"
         >
-          <span className="text-yellow-500">{"<"}</span>MaxCal
-          <span className="text-blue-500">{"/"}</span>
-          <span className="text-yellow-500">{">"}</span>
-        </motion.h1>
+          <motion.h1
+            initial={{ y: "100%", opacity: 0, scale: 0.4 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2 }}
+            className="flex gap-1 text-2xl font-bold text-gray-900 dark:text-white "
+          >
+            <span className="text-yellow-500">{"<"}</span>MaxCal
+            <span className="text-blue-500">{"/"}</span>
+            <span className="text-yellow-500">{">"}</span>
+          </motion.h1>
+        </Link>
         <motion.ul
           className="flex items-center"
           initial={{ y: "100%", opacity: 0, scale: 0.4 }}
