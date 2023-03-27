@@ -90,6 +90,21 @@ export const PROJECTS = [
     deploy: "https://pokedelta.netlify.app/",
     repo: "https://github.com/maxiCalderonBuono/WireDelta-Challenge",
   },
+  {
+    name: "Mejor Postor",
+    image: mejorpostor,
+    description:
+      "As part of a multidisciplinary team at No Country organization, I played a key role in developing a betting website",
+    tech: [
+      { name: "React.js", logo: <LOGOS.ReactIcon /> },
+      { name: "Redux", logo: <LOGOS.ReduxIcon /> },
+      { name: "React router", logo: <LOGOS.ReactRouterIcon /> },
+      { name: "Tailwind CSS", logo: <LOGOS.TailwindIcon /> },
+      { name: "Headless UI", logo: <LOGOS.HeadlessIcon /> },
+    ],
+    deploy: "https://mejorpostor.vercel.app/",
+    repo: "https://github.com/maxiCalderonBuono/S1-07-T-FrontEnd",
+  },
 
   {
     name: "Masked Heroes",
