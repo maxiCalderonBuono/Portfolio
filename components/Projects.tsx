@@ -57,7 +57,7 @@ export const Projects = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center h-full gap-10 px-5 md:gap-8 lg:gap-8 lg:flex-row"
+              className="flex flex-col items-center justify-center h-full px-5 gap-14 md:justify-center md:gap-8 lg:flex-row"
             >
               <div className="md:w-[600px] md:h-[300px] flex justify-center w-full  sm:h-[300px] sm:w-[550px] md:px-5 lg:w-[650px]">
                 <Image
