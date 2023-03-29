@@ -32,3 +32,14 @@ body {
 .swiper-pagination {
   padding-bottom: 2rem;
 }
+
+@media screen and (min-width: 486px) and (max-width: 1024px) {
+  .swiper-pagination {
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .swiper-pagination {
+    padding-bottom: 3rem;
+  }
+}
