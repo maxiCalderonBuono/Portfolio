@@ -32,7 +32,7 @@ interface Project {
 
 export const Projects = () => {
   return (
-    <section className="w-full min-h-[calc(100vh-72px)]  lg:pt-8 md:pb-16 dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#28044d] px-5 ">
+    <section className="w-full min-h-[calc(100vh-72px)] h-[calc(100vh-72px)] lg:pt-8 md:pb-16 dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#140920] px-5 ">
       <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent md:py-8 lg:py-0 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
@@ -48,7 +48,7 @@ export const Projects = () => {
         loop={true}
         navigation
         pagination={{ clickable: true }}
-        className="lg:h-[550px] mt-10 md:mt-0 pagination"
+        className="h-full mt-10 md:mt-0 pagination"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
@@ -57,7 +57,7 @@ export const Projects = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center flex-1 h-full gap-10 px-5 lg:gap-8 lg:flex-row"
+              className="flex flex-col items-center justify-center h-full gap-10 px-5 lg:gap-8 lg:flex-row"
             >
               <div className="md:w-[600px] md:h-[300px] flex justify-center w-full  sm:h-[300px] sm:w-[550px] md:px-5 lg:w-[650px]">
                 <Image
