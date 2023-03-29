@@ -32,8 +32,8 @@ interface Project {
 
 export const Projects = () => {
   return (
-    <section className="w-full min-h-[calc(100vh-72px)] h-[calc(100vh-72px)] lg:pt-8 md:pb-16 dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#140920] px-5 ">
-      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent md:py-8 lg:py-0 bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+    <section className="w-full min-h-[calc(100vh-72px)] h-[calc(100vh-72px)] lg:pt-8  dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#140920] px-5 ">
+      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
       <Swiper
@@ -48,7 +48,7 @@ export const Projects = () => {
         loop={true}
         navigation
         pagination={{ clickable: true }}
-        className="h-full mt-10 md:mt-0 pagination"
+        className="lg:h-[calc(100%-36px)] h-[calc(100%-36px)]"
       >
         {PROJECTS.map((project: Project) => (
           <SwiperSlide>
