@@ -47,13 +47,13 @@ export default function Layout({ children, home }) {
 
         <meta
           property="og:image"
-          // itemprop="image"
-          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+          itemprop="image"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680386077/web-image_cm2hbn.png"
         />
         <meta
           property="og:image:secure_url"
           itemprop="image"
-          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680386077/web-image_cm2hbn.png"
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
@@ -70,11 +70,11 @@ export default function Layout({ children, home }) {
         />
         <meta
           name="twitter:image"
-          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680386077/web-image_cm2hbn.png"
         />
         <meta
           name="twitter:image:secure"
-          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680386077/web-image_cm2hbn.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
