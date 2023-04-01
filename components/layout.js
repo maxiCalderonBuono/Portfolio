@@ -54,6 +54,7 @@ export default function Layout({ children, home }) {
           property="og:image:alt"
           content="Maxi calderon's website thumbnail"
         />
+        <meta property="og:whatsapp" content="true" />
         <meta name="twitter:title" content="Maxi Calderón Frontend Developer" />
         <meta
           name="twitter:description"
