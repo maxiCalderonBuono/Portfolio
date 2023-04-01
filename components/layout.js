@@ -3,9 +3,6 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 
-const name = "Maxi Calderón";
-export const siteTitle = "Maxi Calderón";
-
 export default function Layout({ children, home }) {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -33,7 +30,7 @@ export default function Layout({ children, home }) {
       }`}
     >
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
         <meta name="description" content="Maxi Calderón Dev." />
         <meta property="og:title" content="Maxi Calderón Frontend Developer" />
         <meta property="og:site_name" content="maxicalderon.dev" />
