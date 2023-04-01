@@ -42,6 +42,11 @@ export default function Layout({ children, home }) {
         <meta property="og:type" content="website" />
         <meta property="og:updated_time" content="2023-04-01T21:11:00+02:00" />
         <meta
+          property="og:image"
+          itemprop="image"
+          content="/images/web-image.png"
+        />
+        <meta
           property="og:image:secure_url"
           itemprop="image"
           content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
