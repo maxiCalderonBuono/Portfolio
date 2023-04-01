@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Maxi Calderón Frontend Developer" />
         <meta property="og:site_name" content="maxicalderon.dev" />
-        <meta property="og:url" content="maxicalderon.dev" />
+        <meta property="og:url" content="https://www.maxicalderon.dev/" />
         <meta
           property="og:description"
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
