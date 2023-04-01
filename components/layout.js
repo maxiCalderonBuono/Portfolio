@@ -43,9 +43,17 @@ export default function Layout({ children, home }) {
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a skilled web developer."
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image" content="../public/images/web-image.png" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+        />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Maxi calderon's website thumbnail"
+        />
       </Head>
       <Navbar setter={handleThemeMode} />
       <main>{children}</main>
