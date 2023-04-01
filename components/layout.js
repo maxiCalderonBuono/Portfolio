@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:updated_time" content="2023-04-01T21:11:00+02:00" />
+
         <meta
           property="og:image"
           itemprop="image"
