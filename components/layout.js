@@ -31,6 +31,7 @@ export default function Layout({ children, home }) {
     >
       <Head>
         <link rel="icon" href="/favicon/favicon.ico" />
+        <title>Maxi Calderón</title>
         <meta charset="UTF-8" />
         <meta name="description" content="Maxi Calderón Frontend Developer" />
         <meta name="author" content="Maximiliano Emanuel Calderón Buono" />
