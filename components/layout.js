@@ -39,9 +39,11 @@ export default function Layout({ children, home }) {
           property="og:description"
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
         />
-
+        <meta property="og:type" content="website" />
+        <meta property="og:updated_time" content="2023-04-01T21:00:00+02:00" />
         <meta
-          property="og:image"
+          property="og:image:secure_url"
+          itemprop="image"
           content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
         />
         <meta property="og:image:type" content="image/png" />
@@ -58,7 +60,7 @@ export default function Layout({ children, home }) {
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
         />
         <meta
-          name="twitter:image"
+          name="twitter:image:secure"
           content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
