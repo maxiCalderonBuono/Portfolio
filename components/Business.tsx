@@ -33,7 +33,7 @@ const Business = () => {
           </div>
         </Link>
       </div>
-      <div className="flex justify-center w-1/2 mb-8 lg:mb-20">
+      <div className="flex justify-center w-1/2 mb-8 lg:mb-20 lg:mt-10">
         <Image src={app} alt={`screenshot from web`} width="400" />
       </div>
     </section>

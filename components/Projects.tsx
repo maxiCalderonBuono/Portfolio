@@ -51,7 +51,7 @@ export const Projects = () => {
         className="lg:h-[calc(100%-36px)] h-[calc(100%-36px)]"
       >
         {PROJECTS.map((project: Project) => (
-          <SwiperSlide>
+          <SwiperSlide key={project.name}>
             <motion.div
               initial={{ opacity: 0 }}
               transition={{ duration: 1 }}
@@ -71,6 +71,7 @@ export const Projects = () => {
                 <div className="flex flex-wrap justify-center gap-4 px-5 lg:px-0">
                   {project.tech.map(({ name, logo }) => (
                     <span
+                      key={name}
                       title={name}
                       className="w-10 h-10 tooltip tooltip-primary dark:tooltip-info"
                       data-tip={name}
