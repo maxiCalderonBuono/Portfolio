@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import webThumbnail from "../public/images/web-image.png";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 
@@ -35,12 +35,15 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Maxi Calderón Dev." />
+        <meta property="og:title" content="Maxi Calderón Dev" />
+        <meta property="og:site_name" content="maxicalderon.dev" />
+        <meta property="og:url" content="maxicalderon.dev" />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1677250939/Maxi_Calder%C3%B3n_e3ibxq.png"
+          property="og:description"
+          content="Maxi Calderon's website, maxicalderon.dev, is a platform that showcases the work and portfolio of Maxi Calderon, a skilled web developer."
         />
-        <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content={webThumbnail} />
       </Head>
       <Navbar setter={handleThemeMode} />
       <main>{children}</main>

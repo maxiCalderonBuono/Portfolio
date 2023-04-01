@@ -33,7 +33,7 @@ interface Project {
 export const Projects = () => {
   return (
     <section className="w-full min-h-[calc(100vh-72px)] h-[calc(100vh-72px)] lg:pt-8  dark:bg-gradient-to-b dark:from-[#3a175d] dark:to-[#140920] px-5 ">
-      <h3 className="flex items-center justify-center px-5 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
+      <h3 className="flex items-center justify-center px-5 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500">
         PROJECTS
       </h3>
       <Swiper
