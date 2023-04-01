@@ -8,7 +8,7 @@ const Business = () => {
   return (
     <section className="flex flex-col lg:flex-row lg:min-h-[calc(100vh-72px)] h-full lg:h-[calc(100vh-72px)] items-center justify-center  pt-5 max-w-full mx-auto dark:bg-gradient-to-b dark:from-[#140920] dark:to-[#240345] px-5 md:px-20 ">
       <div className="flex flex-col items-center justify-center order-2 h-full px-2 mb-8 space-y-6 sm:space-y-10 lg:w-1/2 sm:items-start lg:px-8 ">
-        <h3 className="text-center md:text-left text-3xl md:text-4xl font-extrabold text-transparent md:py-8 lg:py-0 bg-clip-text dark:bg-gradient-to-r dark:from-[#fff700] dark:to-indigo-400">
+        <h3 className="text-center md:text-left text-3xl md:text-4xl font-extrabold text-transparent md:py-8 lg:py-0 bg-clip-text bg-gradient-to-r dark:from-[#fff700] dark:to-indigo-400 from-yellow-600 to-indigo-600">
           DATALYCS
         </h3>
 
@@ -27,7 +27,7 @@ const Business = () => {
           target="_blank"
           className="relative w-2/3 sm:w-1/3 lg:w-1/2"
         >
-          <div className="absolute rounded-full -inset-0.5 dark:bg-gradient-to-r dark:from-pink-500 dark:to-lime-500 animate-pulse blur-md"></div>
+          <div className="absolute rounded-full -inset-0.5 bg-gradient-to-r dark:from-pink-500 dark:to-lime-500 from-pink-900 to-cyan-900 animate-pulse blur-md"></div>
           <div className="relative flex items-center justify-center w-full gap-2 px-5 py-3 text-xl text-white bg-black border-none rounded-full">
             <span>Watch video</span> <BsFillPlayFill size={30} />
           </div>

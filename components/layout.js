@@ -47,7 +47,7 @@ export default function Layout({ children, home }) {
 
         <meta
           property="og:image"
-          itemprop="image"
+          // itemprop="image"
           content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
         />
         <meta
