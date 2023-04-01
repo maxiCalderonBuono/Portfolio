@@ -40,9 +40,13 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content="maxicalderon.dev" />
         <meta
           property="og:description"
-          content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a skilled web developer."
+          content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
         />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
+        />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dvqlenul5/image/upload/v1680372841/web-image_en5x24.png"
