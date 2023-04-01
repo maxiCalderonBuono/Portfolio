@@ -40,10 +40,12 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content="maxicalderon.dev" />
         <meta
           property="og:description"
-          content="Maxi Calderon's website, maxicalderon.dev, is a platform that showcases the work and portfolio of Maxi Calderon, a skilled web developer."
+          content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a skilled web developer."
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image" content={webThumbnail} />
+        <meta property="og:image" content="../public/images/web-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <Navbar setter={handleThemeMode} />
       <main>{children}</main>

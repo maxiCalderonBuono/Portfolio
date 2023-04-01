@@ -28,8 +28,8 @@ const Business = () => {
           className="relative w-2/3 sm:w-1/3 lg:w-1/2"
         >
           <div className="absolute rounded-full -inset-0.5 dark:bg-gradient-to-r dark:from-pink-500 dark:to-lime-500 animate-pulse blur-md"></div>
-          <div className="relative flex items-center justify-center w-full px-5 py-3 text-xl text-white bg-black border-none rounded-full">
-            Watch video <BsFillPlayFill />
+          <div className="relative flex items-center justify-center w-full gap-2 px-5 py-3 text-xl text-white bg-black border-none rounded-full">
+            <span>Watch video</span> <BsFillPlayFill size={30} />
           </div>
         </Link>
       </div>
