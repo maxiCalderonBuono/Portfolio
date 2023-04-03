@@ -36,6 +36,10 @@ export default function Layout({ children, home }) {
         <meta name="description" content="Maxi Calderón Frontend Developer" />
         <meta name="author" content="Maximiliano Emanuel Calderón Buono" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="Frontend development, Web development, React, Next, Javascript, Responsive design, Tailwind CSS"
+        ></meta>
         <meta property="og:title" content="Maxi Calderón Frontend Developer" />
         <meta property="og:site_name" content="maxicalderon.dev" />
         <meta property="og:url" content="https://www.maxicalderon.dev/" />
@@ -43,7 +47,7 @@ export default function Layout({ children, home }) {
           property="og:description"
           content="Maxi Calderon's website, is a platform that showcases the work and portfolio of Maxi Calderon, a frontend web developer."
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="profile" />
 
         <meta
           property="og:image"
