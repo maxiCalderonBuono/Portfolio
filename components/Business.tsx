@@ -12,10 +12,10 @@ const Business = () => {
           DATALYCS
         </h3>
 
-        <p className="text-xl italic font-bold text-center sm:text-left dark:text-white">
+        <p className="text-xl italic font-bold text-center text-gray-900 sm:text-left dark:text-white">
           Introducing the ultimate solution for Covid-19 data management
         </p>
-        <p className="text-center dark:text-gray-200 opacity-80 sm:text-left">
+        <p className="text-center text-gray-700 dark:text-gray-200 opacity-80 sm:text-left">
           Developed from scratch alongside one of my best friends, our app was
           designed to streamline data collection and management, making it
           easier than ever to keep track of critical information related to
@@ -29,7 +29,8 @@ const Business = () => {
         >
           <div className="absolute rounded-full -inset-0.5 bg-gradient-to-r dark:from-pink-500 dark:to-lime-500 from-pink-900 to-cyan-900 animate-pulse blur-md"></div>
           <div className="relative flex items-center justify-center w-full gap-2 px-5 py-3 text-xl text-white bg-black border-none rounded-full">
-            <span>Watch video</span> <BsFillPlayFill size={30} />
+            <span className="flex-shrink-0">Watch video</span>{" "}
+            <BsFillPlayFill size={30} />
           </div>
         </Link>
       </div>
