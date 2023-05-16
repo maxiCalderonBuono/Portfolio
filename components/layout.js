@@ -10,7 +10,6 @@ export default function Layout({ children, home }) {
     setDarkMode(!darkMode);
     localStorage.setItem("darkMode", !darkMode);
   };
-
   useEffect(() => {
     const systemColorPreference = window.matchMedia(
       "(prefers-color-scheme: dark)"

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import app from "../public/images/app.png";
-import { BsFillPlayFill } from "react-icons/bs";
+import { BiRightArrowAlt } from "react-icons/bi";
 import Link from "next/link";
+import { BsFillPlayFill } from "react-icons/bs";
 
 const Business = () => {
   return (
@@ -35,7 +36,7 @@ const Business = () => {
         </Link>
       </div>
       <div className="flex justify-center w-1/2 mb-8 lg:mb-20 lg:mt-10">
-        <Image src={app} alt={`screenshot from web`} width="400" />
+        <Image src={app} alt="screenshot from web" width="400" />
       </div>
     </section>
   );
