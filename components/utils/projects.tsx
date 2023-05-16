@@ -10,8 +10,25 @@ import heroes from "../../public/images/heroes-web.png";
 import giftexpert from "../../public/images/giftexpert-web.png";
 import getpass from "../../public/images/getpass-web.png";
 import library from "../../public/images/library-web.png";
+import mindenkie from "../../public/images/mindekie-web.png";
 
 export const PROJECTS = [
+  {
+    name: "Mindenkié",
+    image: mindenkie,
+    description:
+      "React blog utilizing RTK-query, optimistic updates and normalized cache state",
+    tech: [
+      { name: "Typescript", logo: <LOGOS.TypescriptIcon /> },
+      { name: "Next.js", logo: <LOGOS.NextIcon /> },
+      { name: "React.js", logo: <LOGOS.ReactIcon /> },
+      { name: "Contentful", logo: <LOGOS.ContentfulIcon /> },
+      { name: "Zod", logo: <LOGOS.ZodIcon /> },
+      { name: "Cloudinary", logo: <LOGOS.CloudinaryIcon /> },
+    ],
+    deploy: "https://mindenkie.vercel.app/",
+    repo: "https://github.com/maxiCalderonBuono/nextjs-blog-with-headless-CMS",
+  },
   {
     name: "Versatile",
     image: versatile,
