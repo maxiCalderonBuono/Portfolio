@@ -210,6 +210,18 @@ export const ANSWERS = {
       </div>
     </div>
   ),
+    invalidInput: (
+    <div className="flex gap-2">
+      <img
+        src="https://res.cloudinary.com/dvqlenul5/image/upload/v1677154574/571-5718065_bot-autoresponder-clipart_mj2gs1.webp"
+        alt="Codey face"
+        className="w-8 h-8"
+      />
+      <p>
+        Apologies, I'm not quite sure what you're asking. Could you please rephrase your question or provide more details? I'm here to help!
+      </p>
+    </div>
+  ),
   default: (
     <div className="flex gap-2">
       <img
@@ -235,4 +247,5 @@ export const ANSWERS = {
       <BeatLoader color="#36d7b7" />
     </div>
   ),
+  
 };

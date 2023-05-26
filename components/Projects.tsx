@@ -67,7 +67,7 @@ export const Projects = () => {
                 />
               </div>
 
-              <div className="w-full px-5 space-y-5 lg:w-1/3 md:text-left">
+              <div className="w-full space-y-5 md:px-5 lg:w-1/3 md:text-left">
                 <div className="flex flex-wrap justify-center gap-4 px-5 lg:px-0">
                   {project.tech.map(({ name, logo }) => (
                     <span

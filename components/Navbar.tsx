@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Navbar = ({ setter }) => {
   return (
-    <header className="sticky top-0 z-20 flex justify-center w-full px-5 backdrop-blur-md ">
+    <header className="sticky top-0 z-20 flex justify-center w-full px-5 backdrop-blur-sm ">
       <nav className="flex justify-between w-full pt-8 pb-2 max-w-7xl ">
         <Link
           href="#hero"

@@ -17,7 +17,7 @@ export const PROJECTS = [
     name: "Mindenkié",
     image: mindenkie,
     description:
-      "Developed a client's blog, implementing webhooks to trigger automatic deployments, edge functions for dynamic OG image generation, and server components.",
+      "Developed a client's blog, implementing webhooks to trigger automatic deployments, edge functions for dynamic Open Graph, and server components.",
     tech: [
       { name: "Typescript", logo: <LOGOS.TypescriptIcon /> },
       { name: "Next.js", logo: <LOGOS.NextIcon /> },
