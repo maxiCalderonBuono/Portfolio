@@ -37,7 +37,8 @@ const Navbar = ({ setter }) => {
           </li>
           <li className="transform hover:scale-105 active:scale-95">
             <a
-              href="/data/maximilianoCalderonDeveloper.pdf"
+              href="https://drive.google.com/file/d/1rB3X7bzPW-mgTYhhQJohqK9VwcDilJiR/view?usp=drive_link"
+              target="_blank"
               download="Maximiliano Calderón"
               className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-90 "
             >

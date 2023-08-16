@@ -38,7 +38,7 @@ const Hero = () => {
         <Cursor cursorColor="#EFC224" />
       </h3>
 
-      <p className="max-w-3xl px-5 leading-8 tracking-widest text-gray-600 text-md dark:text-gray-300 md:text-md">
+      <p className="max-w-4xl px-5 leading-8 tracking-widest text-gray-600 text-md dark:text-gray-300 md:text-lg">
         Bringing ideas to life with creativity and technology. Let's make
         something extraordinary together. Join me down below and{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r dark:from-yellow-300 dark:to-lime-200 from-purple-900 to-purple-700">
@@ -46,7 +46,7 @@ const Hero = () => {
         </span>
       </p>
 
-      <div className="flex justify-center gap-16 text-5xl text-gray-800 dark:text-lime-100">
+      <div className="flex justify-center gap-16 text-5xl text-gray-800 dark:text-lime-300/70">
         <a
           href="https://twitter.com/mcalderonbuono"
           rel="noreferrer noopener"
